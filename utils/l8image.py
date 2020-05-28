@@ -7,7 +7,7 @@ https://landsat.usgs.gov/landsat-8-cloud-cover-assessment-validation-data
 """
 import os
 import numpy as np
-from skimage.external import tifffile
+import tifffile
 from utils import predbytiles
 
 from datetime import datetime
@@ -169,7 +169,7 @@ class L8Image:
         if slice_ is None:
             slice_ = (slice(None), slice(None))
 
-        bqa = tifffile.imread(os.path.join(self.folder_tiffs, self.name + "_BQA.TIF"), memmap=True)
+        bqa = tifffile.memmap(os.path.join(self.folder_tiffs, self.name + "_BQA.TIF"))
         return bqa[slice_]
 
     def load_fmask(self, slice_=None):
@@ -197,7 +197,7 @@ class L8Image:
         band_name = str(band)
         fileband_name = os.path.join(self.folder_tiffs, self.name +
                                      "_B" + band_name + ".TIF")
-        img = tifffile.imread(fileband_name, memmap=True)
+        img = tifffile.memmap(fileband_name)
         if slice_ is None:
             slice_ = (slice(None), slice(None))
 
@@ -349,7 +349,7 @@ class L8_38Clouds(L8Image):
         if slice_ is None:
             slice_ = (slice(None), slice(None))
 
-        img = tifffile.imread(self.gt_file, memmap=True)
+        img = tifffile.memmap(self.gt_file)
 
         return img[slice_]
 

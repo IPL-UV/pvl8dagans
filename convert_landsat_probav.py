@@ -26,11 +26,11 @@ class ConvertPV(luigi.Task):
     def l8obj(self):
         if not hasattr(self, "l8obj_computed"):
             if self.type_product == "biome":
-                obj = l8image.Biome(self.landsatimage)
+                obj = l8image.Biome(self.l8img)
             elif self.type_product == "38c":
-                obj = l8image.L8_38Clouds(self.landsatimage)
+                obj = l8image.L8_38Clouds(self.l8img)
             else:
-                obj = l8image.L8Image(self.landsatimage)
+                obj = l8image.L8Image(self.l8img)
 
             setattr(self, "l8obj_computed",
                     obj)
