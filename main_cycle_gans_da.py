@@ -126,4 +126,4 @@ class TrainAllCycleGAN(luigi.WrapperTask):
 
 
 if __name__ == "__main__":
-    luigi.run()
+    luigi.run(local_scheduler=True)

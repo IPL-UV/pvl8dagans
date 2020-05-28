@@ -52,4 +52,4 @@ class ConvertPV(luigi.Task):
 
 
 if __name__ == "__main__":
-    luigi.run()
+    luigi.run(local_scheduler=True)
