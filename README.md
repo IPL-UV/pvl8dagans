@@ -12,11 +12,11 @@ The following code creates a new conda virtual environment with required depende
 
 ```bash
 conda create -n pvl8 -c conda-forge python=3.7 matplotlib pillow numpy scipy libgdal pandas \
-            h5py scikit-image tensorflow=2 --y
+            scikit-image tensorflow=2 --y
 
 conda activate pvl8
 
-pip install rasterio spectral tqdm
+pip install rasterio spectral tqdm luigi h5py
 ```
 
 ## Train proposed Adversarial Domain Adaptation 
@@ -29,7 +29,7 @@ python main_cycle_gans_da.py TrainCycleGAN --dataset-folder /folder/with/hdf5/fi
 
 ## Inference Adversarial Domain Adaptation
 
-Apply the DA transformation[2] to a new Proba-V image. A Level2A 333M Proba-V image is required, it can be downloaded from the [VITO portal](http://www.vito-eodata.be/PDF/portal/Application.html)
+Apply the DA transformation[2] to a new Proba-V image. A level 2A 333M Proba-V image is required, it can be downloaded from the [VITO portal](http://www.vito-eodata.be/PDF/portal/Application.html).
 By default it uses the pretrained models from the `checkpoints` folder. See `--cloud-detection-weights` and `--dagans-weights` attributes.
 
 ```
@@ -47,10 +47,26 @@ The `--l8img` attribute points to the unzipped folder with TIF images for each b
 python convert_landsat_probav.py ConvertPV --l8img LC08_L1TP_002054_20160520_20170324_01_T1
 ```
 
-Additionally it also accepts an image with its manually annotated cloud mask from the [Biome dataset](https://landsat.usgs.gov/landsat-8-cloud-cover-assessment-validation-data).
-or from the [38-clouds dataset](https://www.kaggle.com/sorour/38cloud-cloud-segmentation-in-satellite-images).
+Additionally it also accepts an image with its manually annotated cloud mask from the [Biome dataset](https://landsat.usgs.gov/landsat-8-cloud-cover-assessment-validation-data) or from the [38-clouds dataset](https://www.kaggle.com/sorour/38cloud-cloud-segmentation-in-satellite-images).
 
 ```
 python convert_landsat_probav.py ConvertPV --l8img BC/LC80010112014080LGN00 --type-product biome
 ```
 
+## Cite
+
+If you use this work please cite:
+
+```
+ @article{mateo-garcia_transferring_2020,
+	title = {Transferring deep learning models for cloud detection between {Landsat}-8 and {Proba}-{V}},
+	volume = {160},
+	issn = {0924-2716},
+	doi = {10.1016/j.isprsjprs.2019.11.024},
+	journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+	author = {Mateo-García, Gonzalo and Laparra, Valero and López-Puigdollers, Dan and Gómez-Chova, Luis},
+	month = feb,
+	year = {2020},
+	pages = {1--17},
+}
+```

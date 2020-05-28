@@ -42,8 +42,7 @@ class InferenceDA(luigi.Task):
         pvimage_dest.save_bands(pvasl8image)
 
         # Compute cloud mask from transformed image
-        clouds_pvimage = predbytiles.predict(lambda x: model_clouds.predict(x[np.newaxis], batch_size=1)[0],
-                                             pvimage_dest)
+        clouds_pvimage = predbytiles.predict(predbytiles.padded_predict(model_clouds, 4), pvimage_dest)
 
         # Save cloud mask
         with h5py.File(pvimage_dest.hdf5_file, "r+") as input_f:
@@ -51,7 +50,7 @@ class InferenceDA(luigi.Task):
 
 
 if __name__ == "__main__":
-    luigi.run()
+    luigi.run(local_scheduler=True)
 
 
 
