@@ -15,7 +15,9 @@ conda create -n pvl8 -c conda-forge python=3.7 matplotlib 'pillow<7' numpy scipy
 
 conda activate pvl8
 
-pip install rasterio tifffile spectral tqdm luigi h5py
+pip install rasterio tifffile spectral tqdm luigi 
+
+pip install h5py --ignore-installed --no-deps # To use pip h5py otherwise szip compression used in Proba-V cannot be read
 ```
 
 ## Train proposed Adversarial Domain Adaptation 

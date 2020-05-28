@@ -263,7 +263,7 @@ def convert_landsat_to_probav(l8obj, resolution="333M", threshold_invalid=.2, fi
         if file_out is not None:
             write_cloud_mask(file_out,
                              clouds_resize[..., 0].filled(-1),
-                             transform_probav, l8obj)
+                             transform_probav)
     else:
         logging.info("L8 object does not have load clouds attribute")
         clouds_resize = None
