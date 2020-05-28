@@ -11,7 +11,7 @@ This repo contains the code of publications:
 The following code creates a new conda virtual environment with required dependencies.
 
 ```bash
-conda create -n pvl8 -c conda-forge python=3.7 matplotlib pillow numpy scipy libgdal pandas tensorflow=2 --y
+conda create -n pvl8 -c conda-forge python=3.7 matplotlib 'pillow<7' numpy scipy libgdal=2.3 pandas tensorflow=2 --y
 
 conda activate pvl8
 

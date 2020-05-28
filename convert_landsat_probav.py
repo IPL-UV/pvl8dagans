@@ -39,7 +39,6 @@ class ConvertPV(luigi.Task):
     def output(self):
         l8img = self.l8obj()
         path_out = os.path.join(self.outfolder,
-                                l8img.name,
                                 l8img.name+"_"+str(self.resolution)+".HDF5")
         return luigi.LocalTarget(path_out)
 
