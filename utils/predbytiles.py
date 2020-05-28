@@ -67,13 +67,13 @@ def padded_predict(model_clouds, module_shape=4):
         shape_padded_image = np.ceil(shape_image.astype(np.float32) / module_shape).astype(np.int64) * module_shape
 
         if np.all(shape_image == shape_padded_image):
-            return model_clouds.predict(x[np.newaxis], batch_size=1)[0, ..., 0]
+            return model_clouds.predict(x[np.newaxis], batch_size=1)[0, ...]
 
         pad_to_add = shape_padded_image - shape_image
         x_padded = np.pad(x, [[0, pad_to_add[0]],
                               [0, pad_to_add[1]],
                               [0, 0]], mode="reflect")
-        pred_padded = model_clouds.predict(x_padded[np.newaxis], batch_size=1)[0, ..., 0]
+        pred_padded = model_clouds.predict(x_padded[np.newaxis], batch_size=1)[0, ...]
         slice_ = (slice(None),
                   slice(None),
                   slice(0, shape_padded_image[0]-pad_to_add[0]),
