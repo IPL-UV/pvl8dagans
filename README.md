@@ -11,12 +11,11 @@ This repo contains the code of publications:
 The following code creates a new conda virtual environment with required dependencies.
 
 ```bash
-conda create -n pvl8 -c conda-forge python=3.7 matplotlib pillow numpy scipy libgdal pandas \
-            scikit-image tensorflow=2 --y
+conda create -n pvl8 -c conda-forge python=3.7 matplotlib pillow numpy scipy libgdal pandas tensorflow=2 --y
 
 conda activate pvl8
 
-pip install rasterio spectral tqdm luigi h5py
+pip install rasterio tifffile spectral tqdm luigi h5py
 ```
 
 ## Train proposed Adversarial Domain Adaptation 

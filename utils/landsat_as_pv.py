@@ -147,7 +147,7 @@ def downscale_mask(ip_, add_padding=False):
         ip_ = tf.pad(ip_, paddings, mode="CONSTANT", constant_values=1)
 
     return tf.nn.conv2d(ip_,
-                        filter=FILTER_CLOUDS[..., np.newaxis, np.newaxis],
+                        FILTER_CLOUDS[..., np.newaxis, np.newaxis],
                         strides=(1, 3, 3, 1,),
                         padding="VALID")
 
