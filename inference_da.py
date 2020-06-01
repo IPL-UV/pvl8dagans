@@ -43,6 +43,7 @@ class InferenceDA(luigi.Task):
 
         # Compute cloud mask from transformed image
         clouds_pvimage = predbytiles.predict(predbytiles.padded_predict(model_clouds, 4), pvimage_dest)
+        clouds_pvimage = np.filled(clouds_pvimage, -1)
 
         # Save cloud mask
         with h5py.File(pvimage_dest.hdf5_file, "r+") as input_f:

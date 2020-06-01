@@ -100,6 +100,8 @@ class L8Image:
     :param folder_tiffs: folder where the tiffs and metadata stored.
     """
     def __init__(self, folder_tiffs):
+        if folder_tiffs.endswith('/'):
+            folder_tiffs = folder_tiffs[:-1]
         self.folder_tiffs = folder_tiffs
         self.folder = folder_tiffs
         self.name = os.path.basename(folder_tiffs)

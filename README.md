@@ -45,13 +45,13 @@ It requires a L1T Landsat-8 image that could be downloaded from: [EarthExplorer]
 The `--l8img` attribute points to the unzipped folder with TIF images for each band.
 
 ```
-python convert_landsat_probav.py ConvertPV --l8img LC08_L1TP_002054_20160520_20170324_01_T1
+python convert_landsat_probav.py ConvertPV --l8img LC08_L1TP_002054_20160520_20170324_01_T1 --outfolder folder/save/product/
 ```
 
 Additionally it also accepts an image with its manually annotated cloud mask from the [Biome dataset](https://landsat.usgs.gov/landsat-8-cloud-cover-assessment-validation-data) or from the [38-clouds dataset](https://www.kaggle.com/sorour/38cloud-cloud-segmentation-in-satellite-images).
 
 ```
-python convert_landsat_probav.py ConvertPV --l8img BC/LC80010112014080LGN00 --type-product biome
+python convert_landsat_probav.py ConvertPV --l8img BC/LC80010112014080LGN00 --type-product biome --outfolder folder/save/product/
 ```
 
 ## Cite
