@@ -1,12 +1,10 @@
-# Landsat-8 to Proba-V Transfer Learning and Domain Adaptation
+# Landsat-8 to Proba-V Transfer Learning and Domain Adaptation for Cloud detection
 
-This repo contains the code of publications: 
+This repo contains the code of publication: 
 
->[1] G. Mateo-García, V. Laparra, D. López-Puigdollers, and L. Gómez-Chova, "Transferring deep learning models for cloud detection between Landsat-8 and Proba-V", ISPRS Journal of Photogrammetry and Remote Sensing, vol. 160, pp. 1–17, Feb. 2020, doi: 10.1016/j.isprsjprs.2019.11.024. [paper](https://www.sciencedirect.com/science/article/abs/pii/S0924271619302801)
+>[1] G. Mateo-García, V. Laparra, D. López-Puigdollers, and L. Gómez-Chova, "Cross-Sensor Adversarial Domain Adaptation of Landsat-8 and Proba-V images for Cloud Detection", Submitted. [pre-print](https://arxiv.org/abs/xxx.xxxx)
 
->[2] G. Mateo-García, V. Laparra, D. López-Puigdollers, and L. Gómez-Chova, "Cross-Sensor Adversarial Domain Adaptation of Landsat-8 and Proba-V images for Cloud Detection", Submitted. [pre-print](https://arxiv.org/abs/xxx.xxxx)
-
-Additional results of [2] can be found at https://isp.uv.es/projects/cloudsat/pvl8dagans
+Additional results can be found at https://isp.uv.es/projects/cloudsat/pvl8dagans
 
 ## Requirements
 
@@ -47,7 +45,11 @@ The generated product contains the modified Proba-V bands and the cloud mask sto
 
 ![alt text](figs/transformation.png)
 
-It requires a L1T Landsat-8 image that could be downloaded from: [EarthExplorer](https://earthexplorer.usgs.gov/). 
+This is the Landsat-8 to Proba-V transformation proposed in:
+
+>[2] G. Mateo-García, V. Laparra, D. López-Puigdollers, and L. Gómez-Chova, "Transferring deep learning models for cloud detection between Landsat-8 and Proba-V", ISPRS Journal of Photogrammetry and Remote Sensing, vol. 160, pp. 1–17, Feb. 2020, doi: 10.1016/j.isprsjprs.2019.11.024. [paper](https://www.sciencedirect.com/science/article/abs/pii/S0924271619302801)
+
+It requires a L1T Landsat-8 image that could be downloaded from the [EarthExplorer](https://earthexplorer.usgs.gov/). 
 The `--l8img` attribute points to the unzipped folder with TIF images for each band.
 
 ```
