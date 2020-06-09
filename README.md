@@ -24,6 +24,8 @@ pip install h5py --ignore-installed --no-deps # To use pip h5py otherwise szip c
 
 ## Train proposed Adversarial Domain Adaptation 
 
+![alt text](figs/esquema_train.png)
+
 First, download the *Biome Proba-V pseudo-simultaneous dataset* from [here](https://gigatron.uv.es/owncloud/index.php/s/F6T9eM1wDDp7vVG). Then run:
 
 ```
@@ -42,6 +44,8 @@ python inference_da.py InferenceDA --pvimage PROBAV_L2A_20140321_150455_3_333M_V
 The generated product contains the modified Proba-V bands and the cloud mask stored in `CM_DAGANS` dataset of the HDF5 file. 
 
 ## Transform Landsat-8 image to Proba-V following the physically based transformation
+
+![alt text](figs/esquema_transformation.png)
 
 It requires a L1T Landsat-8 image that could be downloaded from: [EarthExplorer](https://earthexplorer.usgs.gov/). 
 The `--l8img` attribute points to the unzipped folder with TIF images for each band.

@@ -11,7 +11,7 @@ def probav_rgb(img):
                    0,1)
 
 
-def d_layer(layer_input, filters, f_size=4,bn=True,name="d_layer"):
+def d_layer(layer_input, filters, f_size=4, bn=True, name="d_layer"):
     """Discriminator layer"""
     d = keras.layers.Conv2D(filters,
                             kernel_size=f_size,
@@ -26,7 +26,7 @@ def d_layer(layer_input, filters, f_size=4,bn=True,name="d_layer"):
     return d
 
 
-def disc_model(shape=(32,32,4), df=16, activation=None,normalization=True,depth=3):
+def disc_model(shape=(64, 64, 4), df=8, activation=None,normalization=True, depth=3):
     ip = keras.layers.Input(shape,name="ip_disc")
     
     if normalization:
@@ -37,11 +37,11 @@ def disc_model(shape=(32,32,4), df=16, activation=None,normalization=True,depth=
     else:
         x_init = ip
     
-    d1 = d_layer(x_init, df, bn=False,name="d_layer_1")
+    d1 = d_layer(x_init, df, bn=False, name="d_layer_1")
     
     for cd in range(depth):
         d1 = d_layer(d1, df * 2**(cd+1),
-                     name="d_layer_%d"%(cd+2))
+                     name="d_layer_%d" % (cd+2))
 
     validity = keras.layers.Conv2D(1,
                                    kernel_size=1,
@@ -55,7 +55,7 @@ def disc_model(shape=(32,32,4), df=16, activation=None,normalization=True,depth=
                               name="discriminator")
 
 
-def generator_simple(shape=(32, 32, 4), df=16, l2reg=None, normtype="batchnorm"):
+def generator_simple(shape=(64, 64, 4), df=64, l2reg=None, normtype="batchnorm"):
     ip = keras.layers.Input(shape, name="ip_gen")
 
     if l2reg is None:
@@ -76,7 +76,7 @@ def generator_simple(shape=(32, 32, 4), df=16, l2reg=None, normtype="batchnorm")
 
     x3 = util_model.conv_blocks(x2, df, -1, reg=reg,
                                 name="generator_block_2", batch_norm=normtype != "no",
-                                dilation_rate=(2,2),
+                                dilation_rate=(2, 2),
                                 normtype=normtype)
     x3 = keras.layers.concatenate([x3, x2], axis=-1, name="gen_concatenate_2")
 
