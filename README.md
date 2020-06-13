@@ -2,7 +2,7 @@
 
 This repo contains the code of publication: 
 
->[1] G. Mateo-García, V. Laparra, D. López-Puigdollers, and L. Gómez-Chova, "Cross-Sensor Adversarial Domain Adaptation of Landsat-8 and Proba-V images for Cloud Detection", Submitted. [pre-print](https://arxiv.org/abs/xxx.xxxx)
+>[1] G. Mateo-García, V. Laparra, D. López-Puigdollers, and L. Gómez-Chova, "Cross-Sensor Adversarial Domain Adaptation of Landsat-8 and Proba-V images for Cloud Detection", Submitted. [pre-print](https://arxiv.org/abs/2006.05923)
 
 Additional results can be found at https://isp.uv.es/projects/cloudsat/pvl8dagans
 
