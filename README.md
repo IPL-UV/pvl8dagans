@@ -2,7 +2,7 @@
 
 This repo contains the code of publication: 
 
-> [1]G. Mateo-Garcia, V. Laparra, D. Lopez-Puigdollers, and L. Gomez-Chova, “Cross-Sensor Adversarial Domain Adaptation of Landsat-8 and Proba-V images for Cloud Detection,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, pp. 1–1, 2020, doi: 10.1109/JSTARS.2020.3031741. [link](https://doi.org/10.1109/JSTARS.2020.3031741)
+> [1] G. Mateo-Garcia, V. Laparra, D. Lopez-Puigdollers, and L. Gomez-Chova, “Cross-Sensor Adversarial Domain Adaptation of Landsat-8 and Proba-V images for Cloud Detection,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, pp. 1–1, 2020, doi: 10.1109/JSTARS.2020.3031741. [paper](https://doi.org/10.1109/JSTARS.2020.3031741)
 
 Additional results can be found at https://isp.uv.es/projects/cloudsat/pvl8dagans
 
@@ -32,7 +32,7 @@ python main_cycle_gans_da.py TrainCycleGAN --dataset-folder /folder/with/hdf5/fi
 
 ## Inference Adversarial Domain Adaptation
 
-Apply the DA transformation[2] to a new Proba-V image. A level 2A 333M Proba-V image is required, it can be downloaded from the [VITO portal](http://www.vito-eodata.be/PDF/portal/Application.html).
+Apply the DA transformation [2] to a new Proba-V image. A level 2A 333M Proba-V image is required, it can be downloaded from the [VITO portal](http://www.vito-eodata.be/PDF/portal/Application.html).
 By default it uses the pretrained models from the `checkpoints` folder. See `--cloud-detection-weights` and `--dagans-weights` attributes.
 
 ```
