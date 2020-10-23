@@ -2,7 +2,7 @@
 
 This repo contains the code of publication: 
 
->[1] G. Mateo-García, V. Laparra, D. López-Puigdollers, and L. Gómez-Chova, "Cross-Sensor Adversarial Domain Adaptation of Landsat-8 and Proba-V images for Cloud Detection", Submitted. [pre-print](https://arxiv.org/abs/2006.05923)
+> [1]G. Mateo-Garcia, V. Laparra, D. Lopez-Puigdollers, and L. Gomez-Chova, “Cross-Sensor Adversarial Domain Adaptation of Landsat-8 and Proba-V images for Cloud Detection,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, pp. 1–1, 2020, doi: 10.1109/JSTARS.2020.3031741. [link](https://doi.org/10.1109/JSTARS.2020.3031741)
 
 Additional results can be found at https://isp.uv.es/projects/cloudsat/pvl8dagans
 
@@ -45,7 +45,7 @@ The generated product contains the modified Proba-V bands and the cloud mask sto
 
 ![alt text](figs/transformation.png)
 
-This is the Landsat-8 to Proba-V transformation proposed in:
+This is the Landsat-8 to Proba-V transformation first proposed in:
 
 >[2] G. Mateo-García, V. Laparra, D. López-Puigdollers, and L. Gómez-Chova, "Transferring deep learning models for cloud detection between Landsat-8 and Proba-V", ISPRS Journal of Photogrammetry and Remote Sensing, vol. 160, pp. 1–17, Feb. 2020, doi: 10.1016/j.isprsjprs.2019.11.024. [paper](https://www.sciencedirect.com/science/article/abs/pii/S0924271619302801)
 
@@ -67,6 +67,15 @@ python convert_landsat_probav.py ConvertPV --l8img BC/LC80010112014080LGN00 --ty
 If you use this work please cite:
 
 ```
+@article{mateo-garcia_cross-sensor_2020,
+	title = {Cross-{Sensor} {Adversarial} {Domain} {Adaptation} of {Landsat}-8 and {Proba}-{V} images for {Cloud} {Detection}},
+	issn = {2151-1535},
+	doi = {10.1109/JSTARS.2020.3031741},
+	journal = {IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
+	author = {Mateo-Garcia, G. and Laparra, V. and Lopez-Puigdollers, D. and Gomez-Chova, L.},
+	year = {2020},
+	pages = {1--1},
+}
  @article{mateo-garcia_transferring_2020,
 	title = {Transferring deep learning models for cloud detection between {Landsat}-8 and {Proba}-{V}},
 	volume = {160},
