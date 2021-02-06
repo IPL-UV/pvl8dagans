@@ -88,3 +88,7 @@ If you use this work please cite:
 	pages = {1--17},
 }
 ```
+## Related work
+
+* [Benchmarking Deep Learning Models for Cloud Detection in Landsat-8 and Sentinel-2](https://github.com/IPL-UV/DL-L8S2-UV)
+* [Multitemporal cloud masking in the Google Earth Engine](https://github.com/IPL-UV/ee_ipl_uv)
