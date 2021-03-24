@@ -92,3 +92,5 @@ If you use this work please cite:
 
 * [Benchmarking Deep Learning Models for Cloud Detection in Landsat-8 and Sentinel-2](https://github.com/IPL-UV/DL-L8S2-UV)
 * [Multitemporal cloud masking in the Google Earth Engine](https://github.com/IPL-UV/ee_ipl_uv)
+
+This work has been developed in the framework of the project TEC2016-77741-R (MINECO-ERDF) and the GEE Award project titled Cloud detection in the cloud granted to Luis Gómez-Chova.
