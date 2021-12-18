@@ -17,7 +17,7 @@ conda activate pvl8
 
 pip install rasterio tifffile spectral tqdm luigi 
 
-pip install h5py --ignore-installed --no-deps # To use pip h5py otherwise szip compression used in Proba-V cannot be read
+pip install h5py --ignore-installed --no-deps # To use pip h5py otherwise Proba-V images with szip compression cannot be read
 ```
 
 ## Train proposed Adversarial Domain Adaptation 
