@@ -95,4 +95,4 @@ If you use this work please cite:
 
 ## Acknowledgements
 
-This work has been developed in the framework of the projects TEC2016-77741-R and PID2019-109026RB-I00 (MINECO-ERDF) and the GEE Award project _Cloud detection in the cloud_ granted to Luis Gómez-Chova.
+This work has been developed in the framework of the projects TEC2016-77741-R and PID2019-109026RB-I00 (MINECO-ERDF) granted to Luis Gómez-Chova.
